@@ -1,12 +1,14 @@
-def isleapYear(year):
-  if (year % 4 == 0 and year % 100 != 0) or year % 400 ==0:
-    return True 
-  else:
-      return False
-
-year = int(input("enter a year : "))
-
-if isleapYear(year):
-     print(' {} is a leap year.'.format(year))
-else:
-    print('{} is not a leap year.'.format(year))
+def recur_factorial(n):  
+   if n == 1:  
+       return n  
+   else:  
+       return n*recur_factorial(n-1)  
+# take input from the user  
+num = int(input("Enter a number: "))  
+# check is the number is negative  
+if num < 0:  
+   print("Sorry, factorial does not exist for negative numbers")  
+elif num == 0:  
+   print("The factorial of 0 is 1")  
+else:  
+   print("The factorial of",num,"is",recur_factorial(num))
